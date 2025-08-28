@@ -283,10 +283,52 @@ history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320
 `;
 document.getElementById("historyContainer").append(history);
 }
-
+   
 });
 
 
+let railwayCall = document.getElementById("railwayCall")
+railwayCall.addEventListener('click',function()
+{
+    let coin=integerConvert("coin-count")
+    if(coin<20)
+    {
+        alert("❌ You don't have enough coin. At least 20 Coin required.");
+        return;
+    }
+else
+{
+    coin=coin-20;
+document.getElementById("coin-count").innerText=coin;
+let heading=document.getElementById("railwayhead").innerText;
+let hotline=document.getElementById("railwayhotline").innerText;
+alert(`📞 Calling ${heading} ${hotline}...`);
+let history=document.createElement("div");
+history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
+<div class="flex flex-col gap-1">
+<span class="font-bold text-lg">${heading}</span>
+<span class="font-bold">${hotline}</span>
+</div>
+<div>
+<span class="font-md">${new Date().toLocaleTimeString()}</span>
+</div>
+</div>
+`;
+document.getElementById("historyContainer").append(history);
+}
+   
+});
+
+
+
+
+    
+    
+
+
+
+    
+    
 
 
     
