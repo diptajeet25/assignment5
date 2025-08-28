@@ -17,6 +17,26 @@ function integerConvert(id)
     return x;
 }
 
+function cardDesign(head,hotline)
+{
+    let heading=document.getElementById(head).innerText;
+let hotlinenumber=document.getElementById(hotline).innerText;
+alert(`📞 Calling ${heading} ${hotlinenumber}...`);
+let history=document.createElement("div");
+history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
+<div class="flex flex-col gap-1">
+<span class="font-bold text-lg">${heading}</span>
+<span class="font-bold">${hotlinenumber}</span>
+</div>
+<div>
+<span class="font-md">${new Date().toLocaleTimeString()}</span>
+</div>
+</div>
+`;
+document.getElementById("historyContainer").append(history);
+
+}
+
 let emergencyCall = document.getElementById("emergencyCall")
 emergencyCall.addEventListener('click',function()
 {
@@ -31,21 +51,7 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("emergencyhead").innerText;
-let hotline=document.getElementById("emergencyhotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("emergencyhead","emergencyhotline");
 }
 
 });
@@ -65,27 +71,10 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("policehead").innerText;
-let hotline=document.getElementById("policehotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("policehead","policehotline");
 }
 
 });
-
-
-
 
 let fireCall = document.getElementById("fireCall")
 fireCall.addEventListener('click',function()
@@ -101,26 +90,10 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("firehead").innerText;
-let hotline=document.getElementById("firehotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("firehead","firehotline");
 }
 
 });
-
-
 
 let ambulanceCall = document.getElementById("ambulanceCall")
 ambulanceCall.addEventListener('click',function()
@@ -135,21 +108,7 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("ambulancehead").innerText;
-let hotline=document.getElementById("ambulancehotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("ambulancehead","ambulancehotline");
 }
 
 });
@@ -167,21 +126,7 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("womenhead").innerText;
-let hotline=document.getElementById("womenhotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("womenhead","womenhotline");
 }
 
 });
@@ -201,21 +146,7 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("corruptionhead").innerText;
-let hotline=document.getElementById("corruptionhotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("corruptionhead","corruptionhotline");
 }
 
 });
@@ -234,23 +165,8 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("electricityhead").innerText;
-let hotline=document.getElementById("electricityhotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("electricityhead","electricityhotline");
 }
-
 });
 
 
@@ -267,21 +183,7 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("brachead").innerText;
-let hotline=document.getElementById("brachotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("brachead","brachotline");
 }
    
 });
@@ -300,21 +202,7 @@ else
 {
     coin=coin-20;
 document.getElementById("coin-count").innerText=coin;
-let heading=document.getElementById("railwayhead").innerText;
-let hotline=document.getElementById("railwayhotline").innerText;
-alert(`📞 Calling ${heading} ${hotline}...`);
-let history=document.createElement("div");
-history.innerHTML=`<div class="flex justify-between gap-4 bg-gray-100 p-4 w-[320px]">
-<div class="flex flex-col gap-1">
-<span class="font-bold text-lg">${heading}</span>
-<span class="font-bold">${hotline}</span>
-</div>
-<div>
-<span class="font-md">${new Date().toLocaleTimeString()}</span>
-</div>
-</div>
-`;
-document.getElementById("historyContainer").append(history);
+cardDesign("railwayhead","railwayhotline");
 }
    
 });
@@ -326,6 +214,7 @@ clearButton.addEventListener('click',function()
    document.getElementById("historyContainer").innerHTML="";
     
 });
+
 
 
 async function copyNumber(hotlineNumber,buttonCopy)
