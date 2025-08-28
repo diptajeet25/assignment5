@@ -319,22 +319,87 @@ document.getElementById("historyContainer").append(history);
    
 });
 
+let clearButton=document.getElementById("clearButton");
+clearButton.addEventListener('click',function()
+{
 
-
-
+   document.getElementById("historyContainer").innerHTML="";
     
-    
+});
 
 
+async function copyNumber(hotlineNumber,buttonCopy)
+{
+    let copyBtn=document.getElementById(buttonCopy);
+    let textToCopy = document.getElementById(hotlineNumber).innerText;
+    let copyCount=parseInt(document.getElementById("copy-cout").innerText);
+    copyCount++;
+    document.getElementById("copy-cout").innerText=copyCount;
+    try{
 
-    
-    
+        await navigator.clipboard.writeText(textToCopy);
+         copyBtn.innerHTML = `<i class='fa-solid fa-check text-green-500'></i> Copied!`;
+         setTimeout(() => {
+                copyBtn.innerHTML = "<i class='fa-regular fa-copy'></i> Copy";
+            }, 1500);
+            } catch (err) {
+            alert("Can Not Copy" + err);
+        }
+}
 
 
-    
-    
+let emergencycopy=document.getElementById("emergencycopy");
+emergencycopy.addEventListener('click',function()
+{
+copyNumber("emergencyhotline","emergencycopy");
+});
+
+let policecopy=document.getElementById("policecopy");
+policecopy.addEventListener('click',function()
+{
+copyNumber("policehotline","policecopy");
+});
+
+let firecopy=document.getElementById("firecopy");
+firecopy.addEventListener('click',function()
+{
+copyNumber("firehotline","firecopy");
+});
+
+let ambulancecopy=document.getElementById("ambulancecopy");
+ambulancecopy.addEventListener('click',function()
+{
+copyNumber("ambulancehotline","ambulancecopy");
+});
+
+let womencopy=document.getElementById("womencopy");
+womencopy.addEventListener('click',function()
+{
+copyNumber("womenhotline","womencopy");
+});
+
+let corruptioncopy=document.getElementById("corruptioncopy");
+corruptioncopy.addEventListener('click',function()
+{
+copyNumber("corruptionhotline","corruptioncopy");
+});
 
 
+let electricitycopy=document.getElementById("electricitycopy");
+electricitycopy.addEventListener('click',function()
+{
+copyNumber("electricityhotline","electricitycopy");
+});
 
-    
-    
+
+let braccopy=document.getElementById("braccopy");
+braccopy.addEventListener('click',function()
+{
+copyNumber("brachotline","braccopy");
+});
+
+let railwaycopy=document.getElementById("railwaycopy");
+railwaycopy.addEventListener('click',function()
+{
+copyNumber("railwayhotline","railwaycopy");
+});
