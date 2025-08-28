@@ -342,8 +342,8 @@ async function copyNumber(hotlineNumber,buttonCopy)
          setTimeout(() => {
                 copyBtn.innerHTML = "<i class='fa-regular fa-copy'></i> Copy";
             }, 1500);
-            } catch (err) {
-            alert("Can Not Copy" + err);
+            } catch (e) {
+            alert("Can Not Copy" + e);
         }
 }
 
