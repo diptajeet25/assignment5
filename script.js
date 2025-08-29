@@ -227,6 +227,7 @@ async function copyNumber(hotlineNumber,buttonCopy)
     try{
 
         await navigator.clipboard.writeText(textToCopy);
+        alert(`Number Copied: ${textToCopy}`);
          copyBtn.innerHTML = `<i class='fa-solid fa-check text-green-500'></i> Copied!`;
          setTimeout(() => {
                 copyBtn.innerHTML = "<i class='fa-regular fa-copy'></i> Copy";
